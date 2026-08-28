@@ -1,0 +1,41 @@
+@media screen and (max-width: 768px)
+{
+    nav
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a
+    {
+        width: 90%;
+        text-align: center;
+    }
+
+    .main-layout
+    {
+        flex-direction: column;
+    }
+
+    .content,
+    .sidebar
+    {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    table
+    {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    img,
+    video,
+    iframe
+    {
+        max-width: 100%;
+        height: auto;
+    }
+}

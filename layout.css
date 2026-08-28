@@ -1,0 +1,28 @@
+.main-layout
+{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+.content
+{
+    width: 70%;
+    padding: 20px;
+}
+
+.sidebar
+{
+    width: 30%;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+footer
+{
+    text-align: center;
+    background-color: navy;
+    color: white;
+    padding: 10px;
+}

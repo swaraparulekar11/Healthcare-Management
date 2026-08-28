@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory Test Price Table</title>
+     <style>
+        *
+        {
+            margin-bottom: 0%;
+        }
+        header
+        {
+            text-align: center;
+            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
+           
+        }
+        body
+        {
+             background: linear-gradient(to right,rgb(0, 102, 153), rgb(72, 172, 240));
+            font-family: 'Times New Roman', Times, serif;
+            color:white;
+            margin:0%
+        }
+        h1
+        {
+            margin: 0%;
+        
+        }
+        nav
+        {   display: flex;
+            justify-content: center;
+            gap: 52px;
+            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
+            padding: 6px;
+        }
+        nav a
+        {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tabl.css">
+</head>
+<body>
+   <header style="background-color: navy; padding: 20px; border: 3px solid white; text-align: center;">
+    <h1 style="color: white; margin: 0;">Clinical Laboratory Management</h1>
+
+    <p style="color: yellow; text-align: center; margin: 10px 0 0;">
+        <i>Laboratory Test Price List</i>
+    </p>
+</header>
+   <nav>
+        <a href="index.html">Home</a>
+        <a href="laboratory-tests.html">Laboratory Tests</a>
+        <a href="health-package.html">Health Packages</a>
+        <a href="patient-registration.html">Online Registrations</a>
+        <a href="test-price-table.html">Reports</a>
+        <a href="health-information.html">Health Information</a>
+        <a href="media.html">Patient Awareness</a>
+        <a href="gallary.html">Laboratory Gallary</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <section>
+        <h2 style="text-align: center;">Laboratory Test Charges</h2>
+        <table border="1" style="margin: 20px auto;">
+            <caption>
+                <b>Clinical Laboratory Test Price List</b>
+            </caption>
+            <thead>
+                <tr>
+                    <th>Test Code</th>
+                    <th>Test Name</th>
+                    <th>Department</th>
+                    <th>Cost</th>
+                    <th>Sample Type</th>
+                    <th>Report Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>T101</td>
+                    <td>Complete Blood Count (CBC)</td>
+                    <td rowspan="2">Hematology</td>
+                    <td>500</td>
+                    <td>Blood</td>
+                    <td>24 hrs</td>
+                </tr>
+                <tr>
+                    <td>T102</td>
+                    <td>HbA1c</td>
+                    <td>700</td>
+                    <td>Blood</td>
+                    <td>24 hrs</td>
+                </tr>
+                <tr>
+                    <td>T103</td>
+                    <td>Liver Function Test (LFT)</td>
+                    <td rowspan="2">Biochemistry</td>
+                    <td>900</td>
+                    <td>Blood</td>
+                    <td>24 hrs</td>
+                </tr>
+                <tr>
+                    <td>T104</td>
+                    <td>Kidney Function Test</td>
+                    <td>850</td>
+                    <td>Blood</td>
+                    <td>24 hrs</td>
+                </tr>
+                <tr>
+                    <td>T105</td>
+                    <td>ECG</td>
+                    <td>cardiology</td>
+                    <td>600</td>
+                    <td>Electric Signals</td>
+                    <td>Immediate</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">
+                         <b>Note:</b> Prices are subject to change. Please contact the laboratory for the latest charges.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+</html>

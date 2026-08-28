@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient </title>
+    <style>
+        *
+        {
+            margin-bottom: 0%;
+        }
+        header
+        {
+            text-align: center;
+            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
+           
+        }
+        body
+        {
+             background: linear-gradient(to right,rgb(0, 102, 153), rgb(72, 172, 240));
+            font-family: 'Times New Roman', Times, serif;
+            color:white;
+            margin:0%
+        }
+        h1
+        {
+            margin: 0%;
+        
+        }
+        nav
+{
+    text-align: center;
+    background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
+    padding: 10px;
+}
+
+nav a
+{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    margin: 3px;
+}
+
+nav a:hover
+{
+    background-color: white;
+    color: rgb(10, 61, 98);
+    text-decoration: underline;
+}
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+   <header style="background-color: navy; padding: 20px; border: 3px solid white; text-align: center;">
+    <h1 style="color: white; margin: 0;">Clinical Laboratory Management System</h1>
+
+    <p style="color: yellow; text-align: center; margin: 10px 0 0;">
+        <i>Online Patient Registration</i>
+    </p>
+</header>
+   <nav>
+        <a href="index.html">Home</a>
+        <a href="laboratory-tests.html">Laboratory Tests</a>
+        <a href="health-package.html">Health Packages</a>
+        <a href="patient-registration.html">Online Registrations</a>
+        <a href="test-price-table.html">Reports</a>
+        <a href="health-information.html">Health Information</a>
+        <a href="media.html">Patient Awareness</a>
+        <a href="gallary.html">Laboratory Gallary</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <section>
+        <h2 style="text-align: center;">Patient Registration Form</h2>
+        <form>
+            <fieldset style="justify-content: center;">
+                <legend style="text-align: center;">Patient Registration</legend>
+                <label for="name">Patient Name:</label> 
+                   <br>
+                <input type="text" id="name" name="name" placeholder="Enter Your Full Name" required>
+                <br> <br>
+                <label for="age">Age:</label>
+                <br>
+                <input type="number" id="age" name="age" min="1" max="100" required>
+                <br><br>
+                <label for="gender">gender:</label>
+                <br>
+                <input type="radio" id="male" name="gender" value="nale" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                <br> <br>
+                <label for="mobile">Mobile Number:</label>
+                <br>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                <br> <br>
+                <label for="email">Email ID:</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+                <br> <br>
+                <label for="dob">Date Of Birth:</label>
+                <br>
+                <input type="date" id="dob" name="dob" required>
+                <br><br>
+                <label for="test">Select Test:</label>
+                <select name="test" id="test" required>
+                    <option value="">select option</option>
+                    <option value="blood">Blood Test</option>
+                    <option value="urine">Urine Test</option>
+                    <option value="liver">Liver Function Test</option>
+                    <option value="diabetes">Diabetes Test</option>
+                    <option value="Kidney">Kidney Function Test</option>
+                </select>
+                <br><br>
+                <label for="appointment">Preferred Appointment Date:</label>
+                <br>
+                <input type="date" name="appointment" id="appointment" required>
+                <br><br>
+                <label for="sample">Sample Collection Preference:</label>
+                <br>
+                <select name="sample" id="sample" required>
+                    <option value="home">Home Collection</option>
+                    <option value="lab">Visit Lab</option>
+                </select>
+                <br><br>
+                <label for="prescription">Upload Doctor's Prescription:</label>
+                <br>
+                <input type="file" id="prescription" name="prescription" required>
+                <br><br>
+                <input type="submit" value="submit">
+                <input type="reset" value="clear">
+            </fieldset>
+        </form>
+    </section>
+    <footer style="text-align: center; background-color: navy; color: white;">
+        <p>&copy; 2026  Clinical Laboratory. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
