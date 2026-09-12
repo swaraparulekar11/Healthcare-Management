@@ -1,103 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratory Gallary</title>
+
+    <title>Laboratory Gallery</title>
+
     <style>
-         *
-        {
-            margin-bottom: 0%;
+
+        * {
+            box-sizing: border-box;
         }
-        header
-        {
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(245, 249, 250, 1);
+            color: rgba(45, 55, 60, 1);
+        }
+
+
+        /* Header */
+
+        header {
+            background-color: rgba(10, 82, 96, 1);
+            color: rgba(255, 255, 255, 1);
+            padding: 20px;
+            border-bottom: 4px solid rgba(70, 170, 180, 1);
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 7px 0 0;
+            color: rgba(220, 240, 242, 1);
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+        }
+
+
+        /* Navigation */
+
+        nav {
+            background-color: rgba(255, 255, 255, 1);
             text-align: center;
-            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-           
+            padding: 10px;
+            border-bottom: 1px solid rgba(200, 215, 218, 1);
         }
-        body
-        {
-             background: linear-gradient(to right,rgb(0, 102, 153), rgb(72, 172, 240));
-            font-family: 'Times New Roman', Times, serif;
-            color:white;
-            margin:0%
-        }
-        h1
-        {
-            margin: 0%;
-        
-        }
-        nav
-{
-    text-align: center;
-    background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-    padding: 10px;
-}
 
-nav a
-{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    margin: 3px;
-}
+        nav a {
+            display: inline-block;
+            color: rgba(30, 75, 82, 1);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 9px 10px;
+            margin: 2px;
+            font-size: 14px;
+        }
 
-nav a:hover
-{
-    background-color: white;
-    color: rgb(10, 61, 98);
-    text-decoration: underline;
-}
+        nav a:hover {
+            background-color: rgba(10, 82, 96, 1);
+            color: rgba(255, 255, 255, 1);
+            border-radius: 4px;
+        }
+
+
+        /* Page Heading */
+
+        .page-heading {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(220, 240, 242, 1);
+        }
+
+        .page-heading h2 {
+            margin: 0 0 8px;
+            color: rgba(10, 82, 96, 1);
+            font-size: 30px;
+        }
+
+        .page-heading p {
+            margin: 0;
+            color: rgba(80, 95, 100, 1);
+        }
+
+
+        /* Gallery */
+
+        .gallery {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .gallery-item {
+            margin: 0;
+            background-color: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(205, 220, 223, 1);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .gallery-item figcaption {
+            color: rgba(10, 82, 96, 1);
+            font-weight: bold;
+            font-size: 17px;
+            padding: 12px 5px 5px;
+        }
+
+        .gallery-item p {
+            font-size: 14px;
+            color: rgba(90, 105, 110, 1);
+            margin: 5px 10px 10px;
+        }
+
+        .gallery-item:hover {
+            border-color: rgba(10, 82, 96, 1);
+        }
+
+
+        /* Information */
+
+        .gallery-info {
+            max-width: 1000px;
+            margin: 10px auto 45px;
+            padding: 25px;
+
+            background-color: rgba(232, 243, 245, 1);
+
+            border-left: 5px solid rgba(10, 82, 96, 1);
+        }
+
+        .gallery-info h2 {
+            color: rgba(10, 82, 96, 1);
+            margin-top: 0;
+        }
+
+        .gallery-info p {
+            line-height: 1.7;
+        }
+
+
+        /* Footer */
+
+        footer {
+            background-color: rgba(30, 50, 55, 1);
+            color: rgba(235, 245, 246, 1);
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-content h3 {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .footer-content p,
+        .footer-content a {
+            font-size: 14px;
+            color: rgba(210, 225, 227, 1);
+        }
+
+        .footer-content a {
+            display: block;
+            text-decoration: none;
+            margin-bottom: 6px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+
+        /* Mobile */
+
+        @media screen and (max-width: 768px) {
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: auto;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
     </style>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <header style="background-color: navy; padding: 20px; border: 3px solid white; text-align: center;">
-    <h1 style="color: white; margin: 0;">Clinical Laboratory Gallery</h1>
 
-    <p style="color: yellow; text-align: center; margin: 10px 0 0;">
-        <i>Explore Our Modern Laboratory Facilities</i>
-    </p>
-</header>
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div>
+
+                <h1>Clinical Laboratory Gallery</h1>
+
+                <p>
+                    <i><strong>
+                        Explore Our Laboratory Facilities
+                    </strong></i>
+                </p>
+
+            </div>
+
+            <div class="contact-info">
+
+                <p>📞 +91 9876543210</p>
+
+                <p>🕒 Mon - Sat: 8:00 AM - 8:00 PM</p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Navigation -->
+
     <nav>
+
         <a href="index.html">Home</a>
-        <a href="laboratory-tests.html">Laboratory Tests</a>
-        <a href="health-package.html">Health Packages</a>
-        <a href="patient-registration.html">Online Registrations</a>
-        <a href="test-price-table.html">Reports</a>
-        <a href="health-information.html">Health Information</a>
-        <a href="media.html">Patient Awareness</a>
-        <a href="gallary.html">Laboratory Gallary</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <section>
-        <h2 style="text-align: center;">Laboratory Infrastructure</h2>
-    </section>
-    <figure class="gallery-item">
-        <a href="infrastructure.html" target="_blank">
-            <img src="infrastructure.jpg" alt="Clinical Laboratory" width="300" height="200" title="Clinical Laboratory">
+
+        <a href="laboratory-tests.html">
+            Laboratory Tests
         </a>
-        <figcaption>Clinical Laboratory</figcaption>
-    </figure>
-    <figure class="gallery-item">
-    <a href="blood-collection.html" target="_blank">
-        <img src="blood-room.jpg" alt="Blood Collection Room" title="Blood Collection Room" width="300" height="200">
-    </a>
-    <figcaption>Blood Collection Room</figcaption>
-    </figure>
-    <figure class="gallery-item">
-    <a href="automated-analyzer.html" target="_blank">
-        <img src="analyzer.jpg" alt="Automated Analyzer" title="Automated Analyzer" width="300" height="200">
-    </a>
-    <figcaption>Automated Analyzer</figcaption>
-    </figure>
-    <figure class="gallery-item">
-    <a href="sample-processing.html" target="_blank">
-        <img src="sample-area.jpg" alt="Sample Processing Area" title="Sample Processing Area" width="300" height="200">
-    </a>
-    <figcaption>Sample Processing Area</figcaption>
-</figure>
+
+        <a href="health-package.html">
+            Health Packages
+        </a>
+
+        <a href="patient-registration.html">
+            Online Registration
+        </a>
+
+        <a href="test-price-table.html">
+            Test Prices
+        </a>
+
+        <a href="health-information.html">
+            Health Information
+        </a>
+
+        <a href="media.html">
+            Patient Awareness
+        </a>
+
+        <a href="gallary.html">
+            Laboratory Gallery
+        </a>
+
+        <a href="contact.html">
+            Contact Us
+        </a>
+
+    </nav>
+
+
+    <!-- Page Heading -->
+
+    <section class="page-heading">
+
+        <h2>Laboratory Infrastructure</h2>
+
+        <p>
+            Take a look at different areas of our clinical laboratory
+        </p>
+
+    </section>
+
+
+    <!-- Gallery -->
+
+    <section class="gallery">
+
+
+        <figure class="gallery-item">
+
+            <a href="infrastructure.html" target="_blank">
+
+                <img src="infrastructure.jpg"
+                     alt="Clinical Laboratory"
+                     title="Clinical Laboratory">
+
+            </a>
+
+            <figcaption>
+                Clinical Laboratory
+            </figcaption>
+
+            <p>
+                Our laboratory infrastructure and working environment.
+            </p>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <a href="blood-collection.html" target="_blank">
+
+                <img src="blood-room.jpg"
+                     alt="Blood Collection Room"
+                     title="Blood Collection Room">
+
+            </a>
+
+            <figcaption>
+                Blood Collection Room
+            </figcaption>
+
+            <p>
+                Dedicated area for patient blood sample collection.
+            </p>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <a href="automated-analyzer.html" target="_blank">
+
+                <img src="analyzer.jpg"
+                     alt="Automated Analyzer"
+                     title="Automated Analyzer">
+
+            </a>
+
+            <figcaption>
+                Automated Analyzer
+            </figcaption>
+
+            <p>
+                Automated equipment used for laboratory testing.
+            </p>
+
+        </figure>
+
+
+        <figure class="gallery-item">
+
+            <a href="sample-processing.html" target="_blank">
+
+                <img src="sample-area.jpg"
+                     alt="Sample Processing Area"
+                     title="Sample Processing Area">
+
+            </a>
+
+            <figcaption>
+                Sample Processing Area
+            </figcaption>
+
+            <p>
+                Area where collected samples are processed for testing.
+            </p>
+
+        </figure>
+
+
+    </section>
+
+
+    <!-- Information -->
+
+    <section class="gallery-info">
+
+        <h2>About Our Laboratory Facilities</h2>
+
+        <p>
+            Our laboratory consists of different areas for sample
+            collection, sample processing and diagnostic testing.
+            Each area has a specific role in the laboratory workflow.
+        </p>
+
+        <p>
+            Click on any image above to learn more about the
+            respective laboratory area and the equipment or
+            services provided there.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>Clinical Laboratory</h3>
+
+                <p>
+                    Clinical Laboratory Management System
+                    for laboratory and patient information.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="laboratory-tests.html">
+                    Laboratory Tests
+                </a>
+
+                <a href="health-package.html">
+                    Health Packages
+                </a>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>📞 +91 9876543210</p>
+
+                <p>✉️ clinicallab@gmail.com</p>
+
+                <p>📍 Chembur, Mumbai - 400077</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Clinical Laboratory.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
 </body>
+
 </html>

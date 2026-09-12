@@ -1,144 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient </title>
+
+    <title>Patient Registration</title>
+
+    <link rel="stylesheet" href="form.css">
+
     <style>
-        *
-        {
-            margin-bottom: 0%;
-        }
-        header
-        {
-            text-align: center;
-            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-           
-        }
+
         body
         {
-             background: linear-gradient(to right,rgb(0, 102, 153), rgb(72, 172, 240));
-            font-family: 'Times New Roman', Times, serif;
-            color:white;
-            margin:0%
+            font-family: Arial, sans-serif;
+            background-color: rgba(235,246,248,1);
+            color: rgba(40,55,60,1);
         }
+
         h1
         {
-            margin: 0%;
-        
+            text-align: center;
+            color: rgba(10,82,96,1);
         }
-        nav
-{
-    text-align: center;
-    background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-    padding: 10px;
-}
 
-nav a
-{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    margin: 3px;
-}
+        form
+        {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,80,90,0.2);
+        }
 
-nav a:hover
-{
-    background-color: white;
-    color: rgb(10, 61, 98);
-    text-decoration: underline;
-}
+        fieldset
+        {
+            padding: 20px;
+            border: 2px solid rgba(20,140,155,0.5);
+            border-radius: 8px;
+            background-color: rgba(240,250,252,1);
+        }
+
+        legend
+        {
+            font-weight: bold;
+            color: white;
+            background-color: rgba(20,140,155,1);
+            padding: 6px 15px;
+            border-radius: 5px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea
+        {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid rgba(120,175,185,1);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea
+        {
+            height: 70px;
+        }
+
+        input[type="radio"]
+        {
+            margin: 8px 5px 8px 0;
+        }
+
+        input[type="submit"],
+        input[type="reset"]
+        {
+            padding: 9px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]
+        {
+            background-color: rgba(10,120,135,1);
+        }
+
+        input[type="reset"]
+        {
+            background-color: rgba(100,110,115,1);
+        }
+
+        .error
+        {
+            color: red;
+            font-size: 13px;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .invalid
+        {
+            border: 2px solid red !important;
+            background-color: rgba(255,235,235,1);
+        }
+
     </style>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="form.css">
-</head>
-<body>
-   <header style="background-color: navy; padding: 20px; border: 3px solid white; text-align: center;">
-    <h1 style="color: white; margin: 0;">Clinical Laboratory Management System</h1>
 
-    <p style="color: yellow; text-align: center; margin: 10px 0 0;">
-        <i>Online Patient Registration</i>
-    </p>
-</header>
-   <nav>
-        <a href="index.html">Home</a>
-        <a href="laboratory-tests.html">Laboratory Tests</a>
-        <a href="health-package.html">Health Packages</a>
-        <a href="patient-registration.html">Online Registrations</a>
-        <a href="test-price-table.html">Reports</a>
-        <a href="health-information.html">Health Information</a>
-        <a href="media.html">Patient Awareness</a>
-        <a href="gallary.html">Laboratory Gallary</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <section>
-        <h2 style="text-align: center;">Patient Registration Form</h2>
-        <form>
-            <fieldset style="justify-content: center;">
-                <legend style="text-align: center;">Patient Registration</legend>
-                <label for="name">Patient Name:</label> 
-                   <br>
-                <input type="text" id="name" name="name" placeholder="Enter Your Full Name" required>
-                <br> <br>
-                <label for="age">Age:</label>
-                <br>
-                <input type="number" id="age" name="age" min="1" max="100" required>
-                <br><br>
-                <label for="gender">gender:</label>
-                <br>
-                <input type="radio" id="male" name="gender" value="nale" required>
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-                <br> <br>
-                <label for="mobile">Mobile Number:</label>
-                <br>
-                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
-                <br> <br>
-                <label for="email">Email ID:</label>
-                <br>
-                <input type="email" id="email" name="email" required>
-                <br> <br>
-                <label for="dob">Date Of Birth:</label>
-                <br>
-                <input type="date" id="dob" name="dob" required>
-                <br><br>
-                <label for="test">Select Test:</label>
-                <select name="test" id="test" required>
-                    <option value="">select option</option>
-                    <option value="blood">Blood Test</option>
-                    <option value="urine">Urine Test</option>
-                    <option value="liver">Liver Function Test</option>
-                    <option value="diabetes">Diabetes Test</option>
-                    <option value="Kidney">Kidney Function Test</option>
-                </select>
-                <br><br>
-                <label for="appointment">Preferred Appointment Date:</label>
-                <br>
-                <input type="date" name="appointment" id="appointment" required>
-                <br><br>
-                <label for="sample">Sample Collection Preference:</label>
-                <br>
-                <select name="sample" id="sample" required>
-                    <option value="home">Home Collection</option>
-                    <option value="lab">Visit Lab</option>
-                </select>
-                <br><br>
-                <label for="prescription">Upload Doctor's Prescription:</label>
-                <br>
-                <input type="file" id="prescription" name="prescription" required>
-                <br><br>
-                <input type="submit" value="submit">
-                <input type="reset" value="clear">
-            </fieldset>
-        </form>
-    </section>
-    <footer style="text-align: center; background-color: navy; color: white;">
-        <p>&copy; 2026  Clinical Laboratory. All Rights Reserved.</p>
-    </footer>
+</head>
+
+<body>
+
+    <h1>Patient Registration Form</h1>
+
+    <form onsubmit="return validateForm()">
+
+        <fieldset>
+
+            <legend>Patient Information</legend>
+
+            <br>
+
+            <!-- Patient Name -->
+
+            <label for="patientName">Patient Name:</label>
+            <br>
+
+            <input
+                type="text"
+                id="patientName"
+                name="patientName"
+            >
+
+            <span id="nameError" class="error"></span>
+
+            <br>
+
+
+            <!-- Mobile Number -->
+
+            <label for="mobile">Mobile Number:</label>
+            <br>
+
+            <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+            >
+
+            <span id="mobileError" class="error"></span>
+
+            <br>
+
+
+            <!-- Email -->
+
+            <label for="email">Email:</label>
+            <br>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+            >
+
+            <span id="emailError" class="error"></span>
+
+            <br><br>
+
+
+            <!-- Date of Birth -->
+
+            <label for="dob">Date of Birth:</label>
+            <br>
+
+            <input
+                type="date"
+                id="dob"
+                name="dob"
+            >
+
+            <span id="dobError" class="error"></span>
+
+            <br><br>
+
+
+            <!-- Gender -->
+
+            <label>Gender:</label>
+            <br>
+
+            <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="Male"
+            >
+
+            <label for="male">Male</label>
+
+            <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="Female"
+            >
+
+            <label for="female">Female</label>
+
+            <input
+                type="radio"
+                id="other"
+                name="gender"
+                value="Other"
+            >
+
+            <label for="other">Other</label>
+
+            <span id="genderError" class="error"></span>
+
+            <br>
+
+
+            <!-- Address -->
+
+            <label for="address">Address:</label>
+            <br>
+
+            <textarea
+                id="address"
+                name="address"
+            ></textarea>
+
+            <span id="addressError" class="error"></span>
+
+            <br>
+
+
+            <!-- Blood Group -->
+
+            <label for="bloodGroup">Blood Group:</label>
+            <br>
+
+            <select
+                id="bloodGroup"
+                name="bloodGroup"
+            >
+
+                <option value="">Select Blood Group</option>
+
+                <option value="A+">A+</option>
+
+                <option value="A-">A-</option>
+
+                <option value="B+">B+</option>
+
+                <option value="B-">B-</option>
+
+                <option value="O+">O+</option>
+
+                <option value="O-">O-</option>
+
+                <option value="AB+">AB+</option>
+
+                <option value="AB-">AB-</option>
+
+            </select>
+
+            <span id="bloodError" class="error"></span>
+
+            <br><br>
+
+
+            <!-- Department -->
+
+            <label for="appointmentType">
+                Department / Appointment Type:
+            </label>
+
+            <br>
+
+            <select
+                id="appointmentType"
+                name="appointmentType"
+            >
+
+                <option value="">
+                    Select Department
+                </option>
+
+                <option value="Blood Test">
+                    Blood Test
+                </option>
+
+                <option value="Urine Test">
+                    Urine Test
+                </option>
+
+                <option value="Thyroid">
+                    Thyroid
+                </option>
+
+                <option value="Diabetes">
+                    Diabetes
+                </option>
+
+                <option value="General Check-up">
+                    General Check-up
+                </option>
+
+            </select>
+
+            <span id="departmentError" class="error"></span>
+
+            <br><br>
+
+
+            <!-- Registration Date -->
+
+            <label for="registrationDate">
+                Registration Date:
+            </label>
+
+            <br>
+
+            <input
+                type="date"
+                id="registrationDate"
+                name="registrationDate"
+            >
+
+            <span id="registrationError" class="error"></span>
+
+            <br>
+
+
+            <!-- Buttons -->
+
+            <input
+                type="submit"
+                value="Submit"
+            >
+
+            <input
+                type="reset"
+                value="Reset"
+            >
+
+        </fieldset>
+
+    </form>
+
+
+    <script src="validation.js"></script>
+
 </body>
+
 </html>

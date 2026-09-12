@@ -1,95 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Awareness</title>
-     <style>
-        *
-        {
-            margin-bottom: 0%;
+
+    <style>
+        * {
+            margin: 0;
         }
-        header
-        {
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(235, 246, 248, 1);
+            color: rgba(40, 55, 60, 1);
+        }
+
+        header {
             text-align: center;
-            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-           
-        }
-        body
-        {
-             background: linear-gradient(to right,rgb(0, 102, 153), rgb(72, 172, 240));
-            font-family: 'Times New Roman', Times, serif;
-            color:white;
-            margin:0%
-        }
-        h1
-        {
-            margin: 0%;
-        
-        }
-        nav
-{
-    text-align: center;
-    background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-    padding: 10px;
-}
-
-nav a
-{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    margin: 3px;
-}
-
-nav a:hover
-{
-    background-color: white;
-    color: rgb(10, 61, 98);
-    text-decoration: underline;
-}
-        dl a
-        {
+            background-color: rgba(10, 82, 96, 1);
             color: white;
+            padding: 20px;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: rgba(220, 240, 242, 1);
+        }
+
+        nav {
+            text-align: center;
+            background-color: white;
+            padding: 12px;
+        }
+
+        nav a {
+            color: rgba(10, 82, 96, 1);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 7px;
+        }
+
+        nav a:hover {
+            color: rgba(220, 80, 60, 1);
+        }
+
+        .heading {
+            text-align: center;
+            color: rgba(10, 82, 96, 1);
+            margin: 25px;
+        }
+
+        section {
+            width: 90%;
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 25px;
+            background-color: white;
+            text-align: center;
+        }
+
+        section h2 {
+            color: rgba(10, 82, 96, 1);
+            margin-bottom: 15px;
+        }
+
+        iframe {
+            max-width: 100%;
+            border: 2px solid rgba(190, 215, 218, 1);
+        }
+
+        audio {
+            margin-top: 10px;
+        }
+
+        .info {
+            background-color: rgba(230, 244, 246, 1);
+            padding: 15px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: rgba(10, 10, 130, 1);
+            color: white;
+            margin-top: 30px;
+        }
+
+        .footer-box {
+            display: flex;
+            justify-content: space-around;
+            padding: 35px 20px;
+            text-align: left;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
             text-decoration: underline;
         }
-    </style>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header style="background-color: navy; padding: 20px; border: 3px solid white; text-align: center;">
-    <h1 style="color: white; margin: 0;">Clinical Laboratory</h1>
 
-    <p style="color: yellow; text-align: center; margin: 10px 0 0;">
-        <i>Accurate Diagnostics for Better Health Care</i>
-    </p>
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Clinical Laboratory</h1>
+    <p><i>Accurate Diagnostics for Better Health Care</i></p>
 </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="laboratory-tests.html">Laboratory Tests</a>
-        <a href="health-package.html">Health Packages</a>
-        <a href="patient-registration.html">Online Registrations</a>
-        <a href="test-price-table.html">Reports</a>
-        <a href="health-information.html">Health Information</a>
-        <a href="media.html">Patient Awareness</a>
-        <a href="gallary.html">Laboratory Gallary</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <h1 style="text-align: center;">Patient Awareness</h1>
-    <section>
-        <h2>Laboratory Sample collection Procedure</h2>
-        <br>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/nCu8foqTXcg?si=YO1ex688teDafOog" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    <section>
-        <h2>Instructions Before Testing</h2>
-        <br>
-        <audio src="instructions.mp3" type="audio/mpeg" controls></audio>
-    </section>
-   <footer style="text-align: center; background-color: navy; color: white;">
-        <p>&copy; 2026  Clinical Laboratory. All Rights Reserved.</p>
-    </footer>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="laboratory-tests.html">Laboratory Tests</a>
+    <a href="health-package.html">Health Packages</a>
+    <a href="patient-registration.html">Online Registrations</a>
+    <a href="test-price-table.html">Reports</a>
+    <a href="health-information.html">Health Information</a>
+    <a href="media.html">Patient Awareness</a>
+    <a href="gallary.html">Laboratory Gallery</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<h1 class="heading">Patient Awareness</h1>
+
+<section>
+    <h2>Laboratory Sample Collection Procedure</h2>
+
+    <p class="info">
+        Watch the video to understand the basic procedure followed
+        during laboratory sample collection.
+    </p>
+
+    <br>
+
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/nCu8foqTXcg?si=YO1ex688teDafOog"
+        title="Laboratory Sample Collection Procedure"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<section>
+    <h2>Instructions Before Testing</h2>
+
+    <p class="info">
+        Listen to the instructions carefully before visiting the
+        laboratory for your test.
+    </p>
+
+    <br>
+
+    <audio src="instructions.mp3" type="audio/mpeg" controls></audio>
+</section>
+
+<footer>
+
+    <div class="footer-box">
+
+        <div>
+            <h3>Clinical Laboratory</h3>
+            <p>
+                Clinical Laboratory Management System for laboratory
+                and patient information.
+            </p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <p><a href="laboratory-tests.html">Laboratory Tests</a></p>
+            <p><a href="health-package.html">Health Packages</a></p>
+            <p><a href="patient-registration.html">Registration</a></p>
+            <p><a href="contact.html">Contact Us</a></p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📞 98765 43210</p>
+            <p>✉ laboratory@example.com</p>
+            <p>📍 Mumbai, Maharashtra</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Clinical Laboratory. All Rights Reserved.
+    </div>
+
+</footer>
+
 </body>
 </html>

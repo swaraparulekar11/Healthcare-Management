@@ -1,156 +1,320 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Laboratory Management System</title>
-    <style>
-        *
-        {
-            margin-bottom: 0%;
-        }
-        header
-        {
-            text-align: center;
-            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-           
-        }
-        body
-        {
-             background: linear-gradient(to right,rgb(0, 102, 153), rgb(72, 172, 240));
-            font-family: 'Times New Roman', Times, serif;
-            color:white;
-            margin:0%
-        }
-        h1
-        {
-            margin: 0%;
-        
-        }
-nav
-{
-    text-align: center;
-    background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-    padding: 10px;
-}
+  <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">+</div>
+                <div>
+                    <h1>Clinical Laboratory</h1>
+                    <p>Management System</p>
+                </div>
+            </div>
 
-nav a
-{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    margin: 3px;
-}
+            <div class="header-info">
+                <p>📞 Contact: 98765 43210</p>
+                <p>🕒 Mon - Sat: 8:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+    </header>
 
-nav a:hover
-{
-    background-color: white;
-    color: rgb(13, 69, 109);
-    text-decoration: underline;
-}
-    </style>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="responsive.css">
-</head>
-<body>
-   <header style="background-color: navy; padding: 20px; border: 3px solid white; text-align: center;">
-    <h1 style="color: white; margin: 0;">Clinical Laboratory</h1>
 
-    <p style="color: rgb(177, 177, 24); text-align: center; margin: 10px 0 0;">
-        <i><strong>Accurate Diagnostics For Better Health Care</strong></i>
-    </p>
-  </header>
+    <!-- Navigation -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="laboratory-tests.html">Laboratory Tests</a>
-        <a href="health-package.html">Health Packages</a>
-        <a href="patient-registration.html">Online Registrations</a>
-        <a href="test-price-table.html">Reports</a>
-        <a href="health-information.html">Health Information</a>
-        <a href="media.html">Patient Awareness</a>
-        <a href="gallary.html">Laboratory Gallary</a>
-        <a href="contact.html">Contact Us</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="laboratory-tests.html">Laboratory Tests</a></li>
+            <li><a href="health-package.html">Health Packages</a></li>
+            <li><a href="patient-registration.html">Registration</a></li>
+            <li><a href="test-price-table.html">Test Prices</a></li>
+            <li><a href="health-information.html">Health Information</a></li>
+            <li><a href="media.html">Patient Awareness</a></li>
+            <li><a href="gallary.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-     <section>
-        <h2 style="text-align: center;">Welcome To Clinical Laboratory Management System</h2>
-        <article>
-            <h3>About Us</h3>
+
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="welcome-text">
+            <p class="small-heading">WELCOME TO OUR LABORATORY</p>
+
+            <h2>Clinical Laboratory<br>Management System</h2>
+
             <p>
-                 Our laboratory is a trusted diagnostic center dedicated to
-            providing accurate, reliable and affordable healthcare services.
-            Our experienced laboratory professionals use modern equipment to
-            deliver high quality test results for patients and healthcare providers.
+                Our laboratory provides information about diagnostic tests,
+                health packages, test prices and patient registration in one place.
             </p>
+
+            <a href="laboratory-tests.html" class="main-button">
+                View Laboratory Tests
+            </a>
+        </div>
+
+        <div class="welcome-box">
+            <div class="lab-symbol">🔬</div>
+            <h3>Diagnostic Services</h3>
             <p>
-               We offer a wide range of laboratory investigations including Blood Tests,
-            Urine Tests, Liver Function Tests (LFT), Kidney Function Tests (KFT),
-            Thyroid Profile, Diabetes Tests, Lipid Profile, and many other diagnostic
-            services. Our goal is to ensure timely diagnosis and better patient care. 
+                Blood tests, urine tests, thyroid tests,
+                diabetes screening and other laboratory services.
             </p>
-            
-            <h3>Our Services</h3>
-
-<div class="service-card">
-    <h4>Blood Testing</h4>
-    <p>Complete blood examinations</p>
-</div>
-
-<div class="service-card">
-    <h4>Urine Analysis</h4>
-    <p>Urine routine and microscopic tests</p>
-</div>
-
-<div class="service-card">
-    <h4>Thyroid Profile</h4>
-    <p>Thyroid hormone level tests</p>
-</div>
-
-<div class="service-card">
-    <h4>Liver Function Test</h4>
-    <p>Evaluate liver health</p>
-</div>
-
-<div class="service-card">
-    <h4>Kidney Function Test</h4>
-    <p>Assess kidney performance</p>
-</div>
-
-<div class="service-card">
-    <h4>Diabetes Screening</h4>
-    <p>Blood sugar and diabetes tests</p>
-</div>
-
-<div class="service-card">
-    <h4>Health Check-up Packages</h4>
-    <p>Full body health check-ups</p>
-</div>
-
-<div class="service-card">
-    <h4>Online Report</h4>
-    <p>Download your reports online</p>
-</div>
-        </article>
+        </div>
     </section>
-    <aside class="sidebar">
-        <h3>Working Hours</h3>
-        <ul>
-            <li>Monday - Saturday : 8:00 AM - 10:00 PM</li>
-            <li>Sunday : 8:00 AM - 2:00 PM</li>
-        </ul>
-        <h3>Why Choose Us?</h3>
-        <ul>
-            <li>✔️ Experienced Pathologist</li>
-            <li>✔️ Modern Diagnostics Equipment</li>
-            <li>✔️ Fast and Accurate Reports</li>
-            <li>✔️ Online Report Access</li>
-            <li>✔️ Affordable Health Packages</li>
-        </ul>
-    </aside>
-    <footer style="text-align: center; background-color: rgb(2, 2, 107); color: white;">
-        <p>&copy; 2026  Clinical Laboratory. All Rights Reserved.</p>
+
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="section-title">
+            <h2>About Our Laboratory</h2>
+            <p>Information about our clinical laboratory services</p>
+        </div>
+
+        <div class="about">
+            <div class="about-text">
+                <p>
+                    A clinical laboratory plays an important role in healthcare
+                    by performing different types of diagnostic tests on patient
+                    samples.
+                </p>
+
+                <p>
+                    Our Clinical Laboratory Management System is designed to
+                    provide patients with useful information about laboratory
+                    tests, health packages, prices and registration.
+                </p>
+
+                <p>
+                    The system helps organize laboratory information and makes
+                    it easier for patients to understand the available services.
+                </p>
+
+                <a href="health-information.html" class="text-button">
+                    Learn More →
+                </a>
+            </div>
+
+            <div class="about-box">
+                <h3>Our Aim</h3>
+                <p>
+                    To provide clear, organized and easily accessible
+                    information about clinical laboratory services.
+                </p>
+
+                <ul>
+                    <li>Easy access to test information</li>
+                    <li>Simple patient registration</li>
+                    <li>Clear test price information</li>
+                    <li>Health awareness information</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services -->
+    <section class="services-section">
+        <div class="section-title">
+            <h2>Our Laboratory Services</h2>
+            <p>Some of the commonly available diagnostic services</p>
+        </div>
+
+        <div class="services">
+
+            <div class="service-card">
+                <div class="service-icon">🩸</div>
+                <h3>Blood Testing</h3>
+                <p>
+                    Basic blood investigations and related diagnostic tests.
+                </p>
+                <a href="laboratory-tests.html">View Tests</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧪</div>
+                <h3>Urine Analysis</h3>
+                <p>
+                    Laboratory testing of urine samples for health assessment.
+                </p>
+                <a href="laboratory-tests.html">View Tests</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🦋</div>
+                <h3>Thyroid Profile</h3>
+                <p>
+                    Information about common thyroid-related laboratory tests.
+                </p>
+                <a href="test-details.html">Details</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🫀</div>
+                <h3>Liver Function</h3>
+                <p>
+                    Tests used to help evaluate liver function.
+                </p>
+                <a href="laboratory-tests.html">View Tests</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🫘</div>
+                <h3>Kidney Function</h3>
+                <p>
+                    Common tests used for assessing kidney function.
+                </p>
+                <a href="laboratory-tests.html">View Tests</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💉</div>
+                <h3>Diabetes Testing</h3>
+                <p>
+                    Information about blood glucose and diabetes-related tests.
+                </p>
+                <a href="laboratory-tests.html">View Tests</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Laboratory Process -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Laboratory Process</h2>
+            <p>Basic steps followed during a laboratory test</p>
+        </div>
+
+        <div class="process">
+
+            <div class="process-step">
+                <span>1</span>
+                <h3>Registration</h3>
+                <p>Register the patient and select the required test.</p>
+            </div>
+
+            <div class="process-step">
+                <span>2</span>
+                <h3>Sample Collection</h3>
+                <p>The required patient sample is collected.</p>
+            </div>
+
+            <div class="process-step">
+                <span>3</span>
+                <h3>Testing</h3>
+                <p>The sample is processed and the required test is performed.</p>
+            </div>
+
+            <div class="process-step">
+                <span>4</span>
+                <h3>Report</h3>
+                <p>The test results are recorded and provided to the patient.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section class="why-section">
+        <div class="section-title">
+            <h2>Why Use Our Laboratory System?</h2>
+        </div>
+
+        <div class="why-list">
+
+            <div>
+                <span>✓</span>
+                <h3>Easy Information</h3>
+                <p>Find information about different laboratory tests easily.</p>
+            </div>
+
+            <div>
+                <span>✓</span>
+                <h3>Simple Registration</h3>
+                <p>Patients can access the registration page conveniently.</p>
+            </div>
+
+            <div>
+                <span>✓</span>
+                <h3>Test Prices</h3>
+                <p>View the available test prices in an organized table.</p>
+            </div>
+
+            <div>
+                <span>✓</span>
+                <h3>Health Awareness</h3>
+                <p>Access useful information related to health and testing.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Quick Links -->
+    <section class="section">
+        <div class="section-title">
+            <h2>Patient Information</h2>
+            <p>Useful pages for patients and visitors</p>
+        </div>
+
+        <div class="quick-links">
+
+            <a href="laboratory-tests.html">
+                <strong>Laboratory Tests</strong>
+                <span>Explore available tests</span>
+            </a>
+
+            <a href="health-package.html">
+                <strong>Health Packages</strong>
+                <span>View available packages</span>
+            </a>
+
+            <a href="patient-registration.html">
+                <strong>Patient Registration</strong>
+                <span>Register for laboratory services</span>
+            </a>
+
+            <a href="contact.html">
+                <strong>Contact Us</strong>
+                <span>Get laboratory contact information</span>
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Clinical Laboratory</h3>
+                <p>
+                    Clinical Laboratory Management System
+                    for organizing laboratory and patient information.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="laboratory-tests.html">Laboratory Tests</a>
+                <a href="health-package.html">Health Packages</a>
+                <a href="patient-registration.html">Registration</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📞 98765 43210</p>
+                <p>✉️ laboratory@example.com</p>
+                <p>📍 Mumbai, Maharashtra</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 Clinical Laboratory Management System</p>
+        </div>
+
     </footer>
-</body>
-</html>

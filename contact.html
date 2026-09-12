@@ -1,93 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-     <style>
-         *
-        {
-            margin-bottom: 0%;
-        }
-        header
-        {
-            text-align: center;
-            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-           
-        }
-        body
-        {
-             background: linear-gradient(to right,rgb(0, 102, 153), rgb(72, 172, 240));
-            font-family: 'Times New Roman', Times, serif;
-            color:white;
-            margin:0%
 
-            
+    <title>Contact Us - Clinical Laboratory</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
         }
-        h1
-        {
-            margin: 0%;
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(245, 249, 250, 1);
+            color: rgba(45, 55, 60, 1);
+        }
+
         
+        header {
+            background-color: rgba(10, 82, 96, 1);
+            color: rgba(255, 255, 255, 1);
+            padding: 20px;
+            border-bottom: 4px solid rgba(70, 170, 180, 1);
         }
-       nav
-{
-    text-align: center;
-    background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-    padding: 10px;
-}
 
-nav a
-{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    margin: 3px;
-}
-
-nav a:hover
-{
-    background-color: white;
-    color: rgb(10, 61, 98);
-    text-decoration: underline;
-}
-        p a
-        {
-            color: white;
-            text-decoration: underline;
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-     </style>
-     <link rel="stylesheet" href="style.css">
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 7px 0 0;
+            color: rgba(220, 240, 242, 1);
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+        }
+
+
+        
+
+        nav {
+            background-color: rgba(255, 255, 255, 1);
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid rgba(200, 215, 218, 1);
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: rgba(30, 75, 82, 1);
+            font-weight: bold;
+            padding: 9px 10px;
+            margin: 2px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background-color: rgba(10, 82, 96, 1);
+            color: rgba(255, 255, 255, 1);
+            border-radius: 4px;
+        }
+
+
+       
+
+        .page-heading {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(220, 240, 242, 1);
+        }
+
+        .page-heading h2 {
+            margin: 0 0 8px;
+            color: rgba(10, 82, 96, 1);
+            font-size: 30px;
+        }
+
+        .page-heading p {
+            margin: 0;
+            color: rgba(80, 95, 100, 1);
+        }
+
+
+       
+
+        .contact-page {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .contact-box,
+        .hours-box {
+            background-color: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(205, 220, 223, 1);
+            border-radius: 6px;
+            padding: 25px;
+        }
+
+        .contact-box h2,
+        .hours-box h2 {
+            color: rgba(10, 82, 96, 1);
+            margin-top: 0;
+        }
+
+        .contact-box > p {
+            line-height: 1.6;
+        }
+
+
+       
+        .contact-detail {
+            margin-top: 18px;
+            padding: 12px;
+            background-color: rgba(232, 243, 245, 1);
+        }
+
+        .contact-detail h3 {
+            margin: 0 0 5px;
+            color: rgba(10, 82, 96, 1);
+        }
+
+        .contact-detail p {
+            margin: 0;
+        }
+
+        .contact-detail a,
+        .emergency a {
+            color: rgba(10, 82, 96, 1);
+        }
+
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid rgba(200, 215, 218, 1);
+            padding: 11px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(10, 82, 96, 1);
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .emergency {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 235, 235, 1);
+            border-left: 5px solid rgba(190, 50, 50, 1);
+        }
+
+        .emergency h3 {
+            margin: 0 0 5px;
+            color: rgba(150, 40, 40, 1);
+        }
+
+
+
+        .contact-info-section {
+            background-color: rgba(232, 243, 245, 1);
+            padding: 40px 20px;
+        }
+
+        .contact-info-section h2 {
+            text-align: center;
+            color: rgba(10, 82, 96, 1);
+            margin-bottom: 25px;
+        }
+
+        .contact-points {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-points div {
+            background-color: rgba(255, 255, 255, 1);
+            padding: 20px;
+            border: 1px solid rgba(205, 220, 223, 1);
+            border-radius: 6px;
+        }
+
+        .contact-points h3 {
+            color: rgba(10, 82, 96, 1);
+        }
+
+        .contact-points p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        
+        footer {
+            background-color: rgba(30, 50, 55, 1);
+            color: rgba(235, 245, 246, 1);
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-content h3 {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .footer-content p,
+        .footer-content a {
+            font-size: 14px;
+            color: rgba(210, 225, 227, 1);
+        }
+
+        .footer-content a {
+            display: block;
+            text-decoration: none;
+            margin-bottom: 6px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+
+        /* Mobile */
+
+   
+
+    </style>
+
 </head>
-<body>
-    <header style="background-color: navy; padding: 20px; border: 3px solid white; text-align: center;">
-    <h1 style="color: white; margin: 0;">Clinical Laboratory</h1>
 
-    <p style="color: yellow; text-align: center; margin: 10px 0 0;">
-        <i>Contact Us for Better Healthcare Services</i>
-    </p>
-</header>
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div>
+
+                <h1>Clinical Laboratory</h1>
+
+                <p>
+                    <i><strong>
+                        Contact Us for Better Healthcare Services
+                    </strong></i>
+                </p>
+
+            </div>
+
+            <div class="contact-info">
+
+                <p>📞 +91 9876543210</p>
+
+                <p>🕒 Mon - Sat: 8:00 AM - 8:00 PM</p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Navigation -->
+
     <nav>
+
         <a href="index.html">Home</a>
         <a href="laboratory-tests.html">Laboratory Tests</a>
         <a href="health-package.html">Health Packages</a>
-        <a href="patient-registration.html">Online Registrations</a>
-        <a href="test-price-table.html">Reports</a>
+        <a href="patient-registration.html">Online Registration</a>
+        <a href="test-price-table.html">Test Prices</a>
         <a href="health-information.html">Health Information</a>
         <a href="media.html">Patient Awareness</a>
-        <a href="gallary.html">Laboratory Gallary</a>
+        <a href="gallary.html">Laboratory Gallery</a>
         <a href="contact.html">Contact Us</a>
+
     </nav>
-<h2 style="text-align: center;">Contact Us</h2>
-<p style="text-align: center;">Address:Chembur, Mumbai - 400077</p>
-<p style="text-align: center;"> phone: <a href="+91 9876543210">+91 9876543210</a></p>
-<p style="text-align: center;">Email: <a href="clinicallab@gmail.com">clinicallab@gmail.com</a></p>
-<p style="text-align: center;">Working Hours:</p>
-<ul style="text-align: center;">
-    <li>Monday - Saturday : 8:00 AM - 8:00 PM</li>
-    <li>Sunday : 8:00 AM - 2:00 PM</li>
-</ul>
-<p style="text-align: center;">Emergency Contact: <a href="+91 9123456789">+91 9123456789</a></p>
+
+
+    <!-- Page Heading -->
+
+    <section class="page-heading">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Get in touch with our clinical laboratory
+        </p>
+
+    </section>
+
+
+    <!-- Contact Details -->
+
+    <section class="contact-page">
+
+
+        <div class="contact-box">
+
+            <h2>Laboratory Contact Details</h2>
+
+            <p>
+                For information about laboratory tests,
+                health packages, registration or other
+                services, you can contact us using the
+                details below.
+            </p>
+
+
+            <div class="contact-detail">
+
+                <h3>📍 Address</h3>
+
+                <p>
+                    Chembur, Mumbai - 400077
+                </p>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <h3>📞 Phone</h3>
+
+                <p>
+                    <a href="tel:+919876543210">
+                        +91 9876543210
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <h3>✉️ Email</h3>
+
+                <p>
+                    <a href="mailto:clinicallab@gmail.com">
+                        clinicallab@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Working Hours -->
+
+        <div class="hours-box">
+
+            <h2>Working Hours</h2>
+
+            <table>
+
+                <tr>
+                    <th>Day</th>
+                    <th>Timing</th>
+                </tr>
+
+                <tr>
+                    <td>Monday - Saturday</td>
+                    <td>8:00 AM - 8:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>Sunday</td>
+                    <td>8:00 AM - 2:00 PM</td>
+                </tr>
+
+            </table>
+
+
+            <div class="emergency">
+
+                <h3>Emergency Contact</h3>
+
+                <p>
+                    📞
+                    <a href="tel:+919123456789">
+                        +91 9123456789
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Before Visiting -->
+
+    <section class="contact-info-section">
+
+        <h2>Before Visiting the Laboratory</h2>
+
+
+        <div class="contact-points">
+
+            <div>
+
+                <h3>1. Check Your Test</h3>
+
+                <p>
+                    Check the required test and preparation
+                    instructions before visiting.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>2. Carry Required Details</h3>
+
+                <p>
+                    Carry the necessary patient and
+                    test-related information during your visit.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>3. Contact Us</h3>
+
+                <p>
+                    Contact the laboratory if you have
+                    questions about testing or sample collection.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>Clinical Laboratory</h3>
+
+                <p>
+                    Clinical Laboratory Management System
+                    for laboratory and patient information.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="laboratory-tests.html">
+                    Laboratory Tests
+                </a>
+
+                <a href="health-package.html">
+                    Health Packages
+                </a>
+
+                <a href="patient-registration.html">
+                    Registration
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>📞 +91 9876543210</p>
+
+                <p>✉️ clinicallab@gmail.com</p>
+
+                <p>📍 Chembur, Mumbai - 400077</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Clinical Laboratory.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
 </body>
+
 </html>

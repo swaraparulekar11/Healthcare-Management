@@ -1,132 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Laboratory Test Price Table</title>
-     <style>
-        *
-        {
-            margin-bottom: 0%;
-        }
-        header
-        {
-            text-align: center;
-            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-           
-        }
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tabl.css">
+
+    <style>
+
         body
         {
-             background: linear-gradient(to right,rgb(0, 102, 153), rgb(72, 172, 240));
-            font-family: 'Times New Roman', Times, serif;
-            color:white;
-            margin:0%
+            background: linear-gradient(
+                to bottom,
+                rgba(220,245,248,1),
+                rgba(245,250,252,1)
+            );
+
+            color: rgba(40,55,60,1);
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        h1
+
+        header
         {
-            margin: 0%;
-        
+            background: linear-gradient(
+                to right,
+                rgba(8,78,92,1),
+                rgba(25,140,155,1)
+            ) !important;
+
+            border: none !important;
+            text-align: center;
+            padding: 20px;
         }
+
+        header h1
+        {
+            color: white;
+            margin: 0;
+        }
+
+        header p
+        {
+            color: rgba(220,245,247,1) !important;
+            margin-top: 10px !important;
+        }
+
         nav
-        {   display: flex;
-            justify-content: center;
-            gap: 52px;
-            background: linear-gradient(to right, rgb(10, 61, 98), rgb(52, 152, 219));
-            padding: 6px;
+        {
+            background-color: white;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 2px solid rgba(20,140,155,0.3);
         }
+
         nav a
+        {
+            color: rgba(8,78,92,1);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 7px;
+        }
+
+        nav a:hover
+        {
+            color: rgba(220,80,60,1);
+            text-decoration: underline;
+        }
+
+        section
+        {
+            width: 90%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255,255,255,0.55);
+            border-radius: 10px;
+        }
+
+        section h2
+        {
+            text-align: center;
+            color: rgba(8,78,92,1);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .intro
+        {
+            width: 70%;
+            margin: 15px auto 25px;
+            padding: 15px;
+            background-color: rgba(255,255,255,0.9);
+            border-left: 5px solid rgba(20,140,155,1);
+            text-align: center;
+            line-height: 1.6;
+            box-shadow: 0 3px 8px rgba(0,80,90,0.1);
+        }
+
+        table
+        {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,80,90,0.18);
+        }
+
+        caption
+        {
+            color: rgba(8,78,92,1);
+            font-size: 20px;
+            padding: 12px;
+        }
+
+        th
+        {
+            background-color: rgba(8,90,105,1);
+            color: white;
+            padding: 14px;
+        }
+
+        td
+        {
+            padding: 13px;
+            border: 1px solid rgba(180,205,210,1);
+        }
+
+        tbody tr:nth-child(even)
+        {
+            background-color: rgba(225,245,247,1);
+        }
+
+        tbody tr:hover
+        {
+            background-color: rgba(195,235,239,1);
+        }
+
+        tfoot td
+        {
+            background-color: rgba(230,245,247,1);
+            color: rgba(50,70,75,1);
+            padding: 14px;
+        }
+
+        footer
+        {
+            background-color: rgba(10,10,130,1);
+            color: white;
+            margin-top: 30px;
+        }
+
+        .footer-box
+        {
+            display: flex;
+            justify-content: space-around;
+            padding: 35px 20px;
+            text-align: left;
+        }
+
+        footer h3
+        {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer p
+        {
+            margin: 8px 0;
+        }
+
+        footer a
         {
             color: white;
             text-decoration: none;
-            font-weight: bold;
         }
-    </style>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="tabl.css">
-</head>
-<body>
-   <header style="background-color: navy; padding: 20px; border: 3px solid white; text-align: center;">
-    <h1 style="color: white; margin: 0;">Clinical Laboratory Management</h1>
 
-    <p style="color: yellow; text-align: center; margin: 10px 0 0;">
+        footer a:hover
+        {
+            text-decoration: underline;
+        }
+
+        .copyright
+        {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>Clinical Laboratory Management</h1>
+
+    <p>
         <i>Laboratory Test Price List</i>
     </p>
+
 </header>
-   <nav>
-        <a href="index.html">Home</a>
-        <a href="laboratory-tests.html">Laboratory Tests</a>
-        <a href="health-package.html">Health Packages</a>
-        <a href="patient-registration.html">Online Registrations</a>
-        <a href="test-price-table.html">Reports</a>
-        <a href="health-information.html">Health Information</a>
-        <a href="media.html">Patient Awareness</a>
-        <a href="gallary.html">Laboratory Gallary</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <section>
-        <h2 style="text-align: center;">Laboratory Test Charges</h2>
-        <table border="1" style="margin: 20px auto;">
-            <caption>
-                <b>Clinical Laboratory Test Price List</b>
-            </caption>
-            <thead>
-                <tr>
-                    <th>Test Code</th>
-                    <th>Test Name</th>
-                    <th>Department</th>
-                    <th>Cost</th>
-                    <th>Sample Type</th>
-                    <th>Report Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>T101</td>
-                    <td>Complete Blood Count (CBC)</td>
-                    <td rowspan="2">Hematology</td>
-                    <td>500</td>
-                    <td>Blood</td>
-                    <td>24 hrs</td>
-                </tr>
-                <tr>
-                    <td>T102</td>
-                    <td>HbA1c</td>
-                    <td>700</td>
-                    <td>Blood</td>
-                    <td>24 hrs</td>
-                </tr>
-                <tr>
-                    <td>T103</td>
-                    <td>Liver Function Test (LFT)</td>
-                    <td rowspan="2">Biochemistry</td>
-                    <td>900</td>
-                    <td>Blood</td>
-                    <td>24 hrs</td>
-                </tr>
-                <tr>
-                    <td>T104</td>
-                    <td>Kidney Function Test</td>
-                    <td>850</td>
-                    <td>Blood</td>
-                    <td>24 hrs</td>
-                </tr>
-                <tr>
-                    <td>T105</td>
-                    <td>ECG</td>
-                    <td>cardiology</td>
-                    <td>600</td>
-                    <td>Electric Signals</td>
-                    <td>Immediate</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="6">
-                         <b>Note:</b> Prices are subject to change. Please contact the laboratory for the latest charges.
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    </section>
+
+
+<nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="laboratory-tests.html">
+        Laboratory Tests
+    </a>
+
+    <a href="health-package.html">
+        Health Packages
+    </a>
+
+    <a href="patient-registration.html">
+        Online Registrations
+    </a>
+
+    <a href="test-price-table.html">
+        Reports
+    </a>
+
+    <a href="health-information.html">
+        Health Information
+    </a>
+
+    <a href="media.html">
+        Patient Awareness
+    </a>
+
+    <a href="gallary.html">
+        Laboratory Gallery
+    </a>
+
+    <a href="contact.html">
+        Contact Us
+    </a>
+
+</nav>
+
+
+<section>
+
+    <h2>Laboratory Test Charges</h2>
+
+
+    <div class="intro">
+
+        <b>Clinical Laboratory Test Price List</b>
+
+        <p>
+            Check the available laboratory tests, their charges,
+            sample requirements and expected report time.
+        </p>
+
+    </div>
+
+
+    <table>
+
+        <caption>
+            <b>Available Laboratory Tests</b>
+        </caption>
+
+
+        <thead>
+
+            <tr>
+
+                <th>Test Code</th>
+
+                <th>Test Name</th>
+
+                <th>Department</th>
+
+                <th>Cost (₹)</th>
+
+                <th>Sample Type</th>
+
+                <th>Report Time</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <tr>
+
+                <td>T101</td>
+
+                <td>
+                    Complete Blood Count (CBC)
+                </td>
+
+                <td rowspan="2">
+                    Hematology
+                </td>
+
+                <td>500</td>
+
+                <td>Blood</td>
+
+                <td>24 hrs</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>T102</td>
+
+                <td>HbA1c</td>
+
+                <td>700</td>
+
+                <td>Blood</td>
+
+                <td>24 hrs</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>T103</td>
+
+                <td>
+                    Liver Function Test (LFT)
+                </td>
+
+                <td rowspan="2">
+                    Biochemistry
+                </td>
+
+                <td>900</td>
+
+                <td>Blood</td>
+
+                <td>24 hrs</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>T104</td>
+
+                <td>
+                    Kidney Function Test
+                </td>
+
+                <td>850</td>
+
+                <td>Blood</td>
+
+                <td>24 hrs</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>T105</td>
+
+                <td>ECG</td>
+
+                <td>Cardiology</td>
+
+                <td>600</td>
+
+                <td>Electric Signals</td>
+
+                <td>Immediate</td>
+
+            </tr>
+
+        </tbody>
+
+
+        <tfoot>
+
+            <tr>
+
+                <td colspan="6">
+
+                    <b>Note:</b>
+                    Prices are subject to change. Please contact
+                    the laboratory for the latest charges.
+
+                </td>
+
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+
+</section>
+
+
+<footer>
+
+    <div class="footer-box">
+
+        <div>
+
+            <h3>Clinical Laboratory</h3>
+
+            <p>
+                Clinical Laboratory Management System for laboratory
+                and patient information.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <p>
+                <a href="laboratory-tests.html">
+                    Laboratory Tests
+                </a>
+            </p>
+
+            <p>
+                <a href="health-package.html">
+                    Health Packages
+                </a>
+            </p>
+
+            <p>
+                <a href="patient-registration.html">
+                    Registration
+                </a>
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact Us
+                </a>
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📞 98765 43210</p>
+
+            <p>✉ laboratory@example.com</p>
+
+            <p>📍 Mumbai, Maharashtra</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Clinical Laboratory. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
 </body>
 </html>
