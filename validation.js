@@ -1,229 +1,287 @@
-function validateForm()
-{
+function validateForm() {
+
     let name = document.getElementById("patientName");
+
+    let patientID = document.getElementById("patientID");
+
     let address = document.getElementById("address");
+
     let mobile = document.getElementById("mobile");
+
     let email = document.getElementById("email");
 
     let dob = document.getElementById("dob");
+
     let bloodGroup = document.getElementById("bloodGroup");
+
     let appointmentType = document.getElementById("appointmentType");
+
     let registrationDate = document.getElementById("registrationDate");
 
     let nameError = document.getElementById("nameError");
+
+    let patientIDError = document.getElementById("patientIDError");
+
     let addressError = document.getElementById("addressError");
+
     let mobileError = document.getElementById("mobileError");
+
     let emailError = document.getElementById("emailError");
+
     let dobError = document.getElementById("dobError");
+
     let genderError = document.getElementById("genderError");
+
     let bloodError = document.getElementById("bloodError");
+
     let departmentError = document.getElementById("departmentError");
+
     let registrationError = document.getElementById("registrationError");
 
     let valid = true;
 
 
-    // Clear previous errors
-
     nameError.innerHTML = "";
+
+    patientIDError.innerHTML = "";
+
     addressError.innerHTML = "";
+
     mobileError.innerHTML = "";
+
     emailError.innerHTML = "";
+
     dobError.innerHTML = "";
+
     genderError.innerHTML = "";
+
     bloodError.innerHTML = "";
+
     departmentError.innerHTML = "";
+
     registrationError.innerHTML = "";
 
 
-    // Remove previous highlighting
-
     name.classList.remove("invalid");
+
+    patientID.classList.remove("invalid");
+
     address.classList.remove("invalid");
+
     mobile.classList.remove("invalid");
+
     email.classList.remove("invalid");
+
     dob.classList.remove("invalid");
+
     bloodGroup.classList.remove("invalid");
+
     appointmentType.classList.remove("invalid");
+
     registrationDate.classList.remove("invalid");
 
 
-    // Remove extra spaces
-
     name.value = name.value.trim();
+
     address.value = address.value.trim();
+
     mobile.value = mobile.value.trim();
+
     email.value = email.value.trim();
 
 
-    // -------------------------
-    // Patient Name
-    // -------------------------
+    if (name.value == "") {
 
-    if (name.value == "")
-    {
         nameError.innerHTML = "Patient Name is required.";
+
         name.classList.add("invalid");
+
         valid = false;
+
     }
 
-    else if (!/^[A-Za-z ]+$/.test(name.value))
-    {
+    else if (!/^[A-Za-z ]+$/.test(name.value)) {
+
         nameError.innerHTML =
-        "Name should contain only alphabets and spaces.";
+            "Name should contain only alphabets and spaces.";
 
         name.classList.add("invalid");
+
         valid = false;
+
     }
 
 
-    // -------------------------
-    // Address
-    // -------------------------
+    if (patientID.value == "") {
 
-    if (address.value == "")
-    {
+        patientIDError.innerHTML = "Patient ID is required.";
+
+        patientID.classList.add("invalid");
+
+        valid = false;
+
+    }
+
+    else if (!/^PAT-[0-9]{4}$/.test(patientID.value)) {
+
+        patientIDError.innerHTML =
+            "Patient ID must be in format PAT-1234.";
+
+        patientID.classList.add("invalid");
+
+        valid = false;
+
+    }
+
+
+    if (address.value == "") {
+
         addressError.innerHTML = "Address is required.";
+
         address.classList.add("invalid");
+
         valid = false;
+
     }
 
 
-    // -------------------------
-    // Mobile Number
-    // -------------------------
+    if (mobile.value == "") {
 
-    if (mobile.value == "")
-    {
         mobileError.innerHTML = "Mobile Number is required.";
+
         mobile.classList.add("invalid");
+
         valid = false;
+
     }
 
-    else if (!/^[6-9][0-9]{9}$/.test(mobile.value))
-    {
+    else if (!/^[0-9]{10}$/.test(mobile.value)) {
+
         mobileError.innerHTML =
-        "Enter a valid 10-digit Indian mobile number.";
+            "Enter a valid 10-digit Indian mobile number.";
 
         mobile.classList.add("invalid");
+
         valid = false;
+
     }
 
 
-    // -------------------------
-    // Email
-    // -------------------------
+    if (email.value == "") {
 
-    if (email.value == "")
-    {
         emailError.innerHTML = "Email is required.";
+
         email.classList.add("invalid");
+
         valid = false;
+
     }
 
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value))
-    {
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+
         emailError.innerHTML =
-        "Enter a valid email address.";
+            "Enter a valid email address.";
 
         email.classList.add("invalid");
+
         valid = false;
+
     }
 
 
-    // -------------------------
-    // Date of Birth
-    // -------------------------
+    if (dob.value == "") {
 
-    if (dob.value == "")
-    {
         dobError.innerHTML = "Date of Birth is required.";
+
         dob.classList.add("invalid");
+
         valid = false;
+
     }
 
-    else
-    {
+    else {
+
         let today = new Date();
+
         let dobDate = new Date(dob.value);
 
-        if (dobDate > today)
-        {
+        if (dobDate > today) {
+
             dobError.innerHTML =
-            "Date of Birth cannot be a future date.";
+                "Date of Birth cannot be a future date.";
 
             dob.classList.add("invalid");
+
             valid = false;
+
         }
+
     }
 
-
-    // -------------------------
-    // Gender
-    // -------------------------
 
     let genderSelected =
         document.querySelector('input[name="gender"]:checked');
 
-    if (genderSelected == null)
-    {
+    if (genderSelected == null) {
+
         genderError.innerHTML = "Please select Gender.";
+
         valid = false;
+
     }
 
 
-    // -------------------------
-    // Blood Group
-    // -------------------------
+    if (bloodGroup.value == "") {
 
-    if (bloodGroup.value == "")
-    {
         bloodError.innerHTML = "Please select Blood Group.";
+
         bloodGroup.classList.add("invalid");
+
         valid = false;
+
     }
 
 
-    // -------------------------
-    // Department
-    // -------------------------
+    if (appointmentType.value == "") {
 
-    if (appointmentType.value == "")
-    {
         departmentError.innerHTML =
-        "Please select Department / Appointment Type.";
+            "Please select Department / Appointment Type.";
 
         appointmentType.classList.add("invalid");
+
         valid = false;
+
     }
 
 
-    // -------------------------
-    // Registration Date
-    // -------------------------
+    if (registrationDate.value == "") {
 
-    if (registrationDate.value == "")
-    {
         registrationError.innerHTML =
-        "Registration Date is required.";
+            "Registration Date is required.";
 
         registrationDate.classList.add("invalid");
+
         valid = false;
+
     }
 
-    else
-    {
+    else {
+
         let today = new Date();
+
         let registration = new Date(registrationDate.value);
 
-        if (registration > today)
-        {
+        if (registration > today) {
+
             registrationError.innerHTML =
-            "Registration Date cannot be a future date.";
+                "Registration Date cannot be a future date.";
 
             registrationDate.classList.add("invalid");
+
             valid = false;
+
         }
+
     }
 
 

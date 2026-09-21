@@ -12,43 +12,37 @@
     <link rel="stylesheet" href="form.css">
 
     <style>
-
-        body
-        {
+        body {
             font-family: Arial, sans-serif;
-            background-color: rgba(235,246,248,1);
-            color: rgba(40,55,60,1);
+            background-color: rgba(235, 246, 248, 1);
+            color: rgba(40, 55, 60, 1);
         }
 
-        h1
-        {
+        h1 {
             text-align: center;
-            color: rgba(10,82,96,1);
+            color: rgba(10, 82, 96, 1);
         }
 
-        form
-        {
+        form {
             width: 500px;
             margin: 30px auto;
             padding: 20px;
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,80,90,0.2);
+            box-shadow: 0 4px 12px rgba(0, 80, 90, 0.2);
         }
 
-        fieldset
-        {
+        fieldset {
             padding: 20px;
-            border: 2px solid rgba(20,140,155,0.5);
+            border: 2px solid rgba(20, 140, 155, 0.5);
             border-radius: 8px;
-            background-color: rgba(240,250,252,1);
+            background-color: rgba(240, 250, 252, 1);
         }
 
-        legend
-        {
+        legend {
             font-weight: bold;
             color: white;
-            background-color: rgba(20,140,155,1);
+            background-color: rgba(20, 140, 155, 1);
             padding: 6px 15px;
             border-radius: 5px;
         }
@@ -58,29 +52,25 @@
         input[type="email"],
         input[type="date"],
         select,
-        textarea
-        {
+        textarea {
             width: 90%;
             padding: 8px;
             margin-top: 5px;
-            border: 1px solid rgba(120,175,185,1);
+            border: 1px solid rgba(120, 175, 185, 1);
             border-radius: 5px;
             box-sizing: border-box;
         }
 
-        textarea
-        {
+        textarea {
             height: 70px;
         }
 
-        input[type="radio"]
-        {
+        input[type="radio"] {
             margin: 8px 5px 8px 0;
         }
 
         input[type="submit"],
-        input[type="reset"]
-        {
+        input[type="reset"] {
             padding: 9px 20px;
             margin-top: 15px;
             border: none;
@@ -89,30 +79,25 @@
             cursor: pointer;
         }
 
-        input[type="submit"]
-        {
-            background-color: rgba(10,120,135,1);
+        input[type="submit"] {
+            background-color: rgba(10, 120, 135, 1);
         }
 
-        input[type="reset"]
-        {
-            background-color: rgba(100,110,115,1);
+        input[type="reset"] {
+            background-color: rgba(100, 110, 115, 1);
         }
 
-        .error
-        {
+        .error {
             color: red;
             font-size: 13px;
             display: block;
             margin-top: 4px;
         }
 
-        .invalid
-        {
+        .invalid {
             border: 2px solid red !important;
-            background-color: rgba(255,235,235,1);
+            background-color: rgba(255, 235, 235, 1);
         }
-
     </style>
 
 </head>
@@ -121,7 +106,7 @@
 
     <h1>Patient Registration Form</h1>
 
-    <form onsubmit="return validateForm()">
+    <form onsubmit="if(validateForm()) calculateRegistration(); return false;">
 
         <fieldset>
 
@@ -129,99 +114,82 @@
 
             <br>
 
-            <!-- Patient Name -->
+
 
             <label for="patientName">Patient Name:</label>
             <br>
 
-            <input
-                type="text"
-                id="patientName"
-                name="patientName"
-            >
+            <input type="text" id="patientName" name="patientName">
 
             <span id="nameError" class="error"></span>
 
             <br>
 
 
-            <!-- Mobile Number -->
+            <label for="patientID">Patient ID:</label>
+            <br>
+
+            <input type="text" id="patientID" name="patientID">
+
+            <span id="patientIDError" class="error"></span>
+
+            <br>
+
+
 
             <label for="mobile">Mobile Number:</label>
             <br>
 
-            <input
-                type="tel"
-                id="mobile"
-                name="mobile"
-            >
+            <input type="tel" id="mobile" name="mobile">
 
             <span id="mobileError" class="error"></span>
 
             <br>
 
 
-            <!-- Email -->
+
 
             <label for="email">Email:</label>
             <br>
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-            >
+            <input type="email" id="email" name="email">
 
             <span id="emailError" class="error"></span>
 
             <br><br>
 
 
-            <!-- Date of Birth -->
+            <label for="age">Patient Age:</label>
+            <br>
+
+            <input type="number" id="age">
+
+            <br><br>
+
 
             <label for="dob">Date of Birth:</label>
             <br>
 
-            <input
-                type="date"
-                id="dob"
-                name="dob"
-            >
+            <input type="date" id="dob" name="dob">
 
             <span id="dobError" class="error"></span>
 
             <br><br>
 
 
-            <!-- Gender -->
 
             <label>Gender:</label>
             <br>
 
-            <input
-                type="radio"
-                id="male"
-                name="gender"
-                value="Male"
-            >
+            <input type="radio" id="male" name="gender" value="Male">
 
             <label for="male">Male</label>
 
-            <input
-                type="radio"
-                id="female"
-                name="gender"
-                value="Female"
-            >
+            <input type="radio" id="female" name="gender" value="Female">
 
             <label for="female">Female</label>
 
-            <input
-                type="radio"
-                id="other"
-                name="gender"
-                value="Other"
-            >
+            <input type="radio" id="other" name="gender" value="Other">
 
             <label for="other">Other</label>
 
@@ -230,30 +198,23 @@
             <br>
 
 
-            <!-- Address -->
+
 
             <label for="address">Address:</label>
             <br>
 
-            <textarea
-                id="address"
-                name="address"
-            ></textarea>
+            <textarea id="address" name="address"></textarea>
 
             <span id="addressError" class="error"></span>
 
             <br>
 
 
-            <!-- Blood Group -->
 
             <label for="bloodGroup">Blood Group:</label>
             <br>
 
-            <select
-                id="bloodGroup"
-                name="bloodGroup"
-            >
+            <select id="bloodGroup" name="bloodGroup">
 
                 <option value="">Select Blood Group</option>
 
@@ -280,7 +241,6 @@
             <br><br>
 
 
-            <!-- Department -->
 
             <label for="appointmentType">
                 Department / Appointment Type:
@@ -288,10 +248,7 @@
 
             <br>
 
-            <select
-                id="appointmentType"
-                name="appointmentType"
-            >
+            <select id="appointmentType" name="appointmentType">
 
                 <option value="">
                     Select Department
@@ -324,7 +281,7 @@
             <br><br>
 
 
-            <!-- Registration Date -->
+
 
             <label for="registrationDate">
                 Registration Date:
@@ -332,28 +289,42 @@
 
             <br>
 
-            <input
-                type="date"
-                id="registrationDate"
-                name="registrationDate"
-            >
+            <input type="date" id="registrationDate" name="registrationDate">
 
             <span id="registrationError" class="error"></span>
 
             <br>
 
+            <label for="temperature">Temperature:</label>
+            <br>
+            <input type="number" id="temperature" step="0.1">
 
-            <!-- Buttons -->
+            <br><br>
 
-            <input
-                type="submit"
-                value="Submit"
-            >
+            <label for="severity">Severity:</label>
+            <br>
+            <select id="severity">
+                <option value="">Select Severity</option>
+                <option value="Mild">Mild</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Severe">Severe</option>
+            </select>
 
-            <input
-                type="reset"
-                value="Reset"
-            >
+            <br><br>
+
+            <label for="emergency">Emergency Status:</label>
+            <br>
+            <select id="emergency">
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+            <input type="reset" value="Reset">
 
         </fieldset>
 
@@ -361,6 +332,174 @@
 
 
     <script src="validation.js"></script>
+    <script>
+        function calculateRegistration() 
+        {
+            let patientName = document.getElementById('patientName').value;
+            let patientID = document.getElementById("patientID").value;
+            let patientAge = Number(document.getElementById('age').value);
+            let consultationFee = 500;
+            let RegistrationFee = 100;
+            let totalAmount = consultationFee + RegistrationFee;
+            let RegistrationStatus;
+            let temperature = Number(document.getElementById("temperature").value);
+            let severity = document.getElementById("severity").value;
+            let emergencyStatus = document.getElementById("emergency").value;
+            if (patientAge >= 60) {
+                totalAmount = totalAmount - 50;
+                RegistrationStatus = "Senior Citizen-Discount Elligible";
+            }
+            else {
+                RegistrationStatus = "Regular Patient";
+            }
+            let priority;
+
+            if (emergencyStatus == "Yes") {
+                priority = "Emergency Consultation Required";
+            }
+            else if (temperature >= 39) {
+                priority = "High Priority Consultation";
+            }
+            else if (severity == "Severe") {
+                priority = "High Priority Consultation";
+            }
+            else if (patientAge >= 60 && severity == "Moderate") {
+                priority = "Priority Consultation";
+            }
+            else {
+                priority = "Regular Consultation";
+            }
+
+            alert("Registration Successfull");
+
+            console.log("Patient Name: " + patientName);
+            console.log("Patient ID: " + patientID);
+            console.log("Total Amount: ₹" + totalAmount);
+            console.log("Registration Status: " + RegistrationStatus);
+            console.log("Temperature: " + temperature + "°C");
+            console.log("Severity: " + severity);
+            console.log("Emergency Status: " + emergencyStatus);
+            console.log("Priority: " + priority);
+
+
+
+            let patient = {
+                patientName: patientName,
+                patientId: patientID,
+                age: patientAge,
+                gender: document.querySelector('input[name="gender"]:checked').value,
+                bloodGroup: document.getElementById("bloodGroup").value,
+                mobile: document.getElementById("mobile").value,
+                department: document.getElementById("appointmentType").value,
+                appointmentType: document.getElementById("appointmentType").value,
+                registrationStatus: RegistrationStatus,
+
+                displayPatient: function () {
+                    console.log("Patient Name: " + this.patientName);
+                    console.log("Patient ID: " + this.patientId);
+                    console.log("Age: " + this.age);
+                    console.log("Gender: " + this.gender);
+                    console.log("Blood Group: " + this.bloodGroup);
+                    console.log("Mobile: " + this.mobile);
+                    console.log("Department: " + this.department);
+                    console.log("Appointment Type: " + this.appointmentType);
+                    console.log("Registration Status: " + this.registrationStatus);
+                },
+
+                displayAppointment: function () {
+                    console.log("Department: " + this.department);
+                    console.log("Appointment Type: " + this.appointmentType);
+                },
+
+                checkAge: function () {
+                    if (this.age >= 60) {
+                        console.log("Senior Citizen");
+                    }
+                    else if (this.age >= 18) {
+                        console.log("Adult");
+                    }
+                    else {
+                        console.log("Minor");
+                    }
+                }
+            };
+
+            patient.displayPatient();
+            patient.displayAppointment();
+            patient.checkAge();
+
+
+
+            let patientAges = [22, 35, 67, 45, 29, 72, 56, 18, 64, 40];
+
+
+            console.log("All Patient Ages:");
+
+            for (let i = 0; i < patientAges.length; i++) {
+                console.log(patientAges[i]);
+            }
+
+
+            let minAge = patientAges[0];
+
+            for (let i = 1; i < patientAges.length; i++) {
+                if (patientAges[i] < minAge) {
+                    minAge = patientAges[i];
+                }
+            }
+
+
+            let maxAge = patientAges[0];
+
+            for (let i = 1; i < patientAges.length; i++) {
+                if (patientAges[i] > maxAge) {
+                    maxAge = patientAges[i];
+                }
+            }
+
+
+            let sum = 0;
+
+            for (let i = 0; i < patientAges.length; i++) {
+                sum = sum + patientAges[i];
+            }
+
+            let averageAge = sum / patientAges.length;
+
+
+            let seniorCount = 0;
+
+            for (let i = 0; i < patientAges.length; i++) {
+                if (patientAges[i] >= 60) {
+                    seniorCount++;
+                }
+            }
+
+
+            let below18 = 0;
+
+            for (let i = 0; i < patientAges.length; i++) {
+                if (patientAges[i] < 18) {
+                    below18++;
+                }
+            }
+
+            console.log("Patients whose age is greater than 60:");
+
+            for (let i = 0; i < patientAges.length; i++) {
+                if (patientAges[i] > 60) {
+                    console.log(patientAges[i]);
+                }
+            }
+
+
+            console.log("Minimum Age: " + minAge);
+            console.log("Maximum Age: " + maxAge);
+            console.log("Average Age: " + averageAge);
+            console.log("Senior Citizens: " + seniorCount);
+            console.log("Patients Below 18: " + below18);
+        }
+    </script>
 
 </body>
 
